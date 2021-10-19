@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Entities.oReadNameFile>
+
+@{
+    ViewData["Title"] = "Pagina principal";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Web MVC .NET 5 con HS</h1>
+    <p>Web <a href="http://www.awkanit.cl">Desarrollada con ASP.NET 5</a>.</p>
+</div>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">FECHA</th>
+        </tr>       
+    </thead>
+    <tbody>
+
+    </tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td scope="row">@item.NOMBRE</td>
+            <td>@item.FECHA_INGRESO</td>
+        </tr>
+    }
+</table>
